@@ -29,15 +29,15 @@
       <div class="col-md-6" >
         <h1>USER PROFILE</h1>
         <app-user-details (searchResult) = "searchUser($event)"></app-user-details>
-       <div class="container mt-5">
+       <div class="container mt-5" style="background-image: url(/assets/pexels-benjamin-suter-3733269.jpg);">
  
-  <div class="row mt-5">
+  <div class="row mt-5" style="color: antiquewhite; background-color: black; opacity: 0.75;">
       <div class="col-md-5">
           <div class="row">
               <img src="{{user.avatar_url}}" class="rounded-circle img-fluid" alt="Avatar">
           </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5" >
         <div class="row mb-5">
           <h2 class="mt-5 mb-4">{{user.name}}</h2>
           <br>
