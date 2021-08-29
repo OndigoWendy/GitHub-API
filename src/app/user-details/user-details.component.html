@@ -1,2 +1,8 @@
 
- 
+ <form >
+  <div class="input-group">
+      <input type="search" [(ngModel)]="githubUserQuery" name="githubUserQuery" class="form-control rounded " placeholder="Search" aria-label="Search"
+        aria-describedby="search-addon" />
+      <button type="button" class="btn btn-dark" (click)="searchUser()">search</button>
+  </div>
+</form>
