@@ -7,8 +7,7 @@
 export const environment = {
   production: false,
   clientId: 'user client id',
-  clientSecret:'user client secret',
-  accessToken:'my access token',
+  accessToken:'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',
   // access_token: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,
   // apiUrl:'https://api.github.com/users/daneden?access_token=' + apiKey
 };

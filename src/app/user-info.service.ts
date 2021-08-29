@@ -23,10 +23,7 @@ getProfile(username:string){
       avatar_url:string;
       type:string;
   }
-  // let userApiUrl = 'https://api.github.com/users/'+username+'?client_id='+"accessToken="+environment.accessToken;
-  let userApiUrl = 'https://api.github.com/users/'+username+'?client_id='+environment.clientId + "&client_secret="+environment.clientSecret;
-//https://api.github.com/users/'+username+'?client_id='+environment.clientId + "&client_secret="+environment.clientSecret
-//let userApiUrl = 'https://api.github.com/users/daneden?access_token=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';
+   let userApiUrl = 'https://api.github.com/users/'+username+'?client_id='+"accessToken="+environment.accessToken;
 let promise = new Promise<void>((resolve,reject) =>{
   this.httpClient
   .get<retrieveUserData>(userApiUrl)
@@ -53,9 +50,8 @@ getRepoData(username:string){
     created_at:Date
     
   }
-  //https://api.github.com/users/"+ uname +"?access_token=" + environment.githubApi
-  // let repoUrl = 'https://api.github.com/users/'+username+'/repos?order=created&sort=asc?client_id='+environment.accessToken;
-  let repoUrl = 'https://api.github.com/users/'+username+'/repos?order=created&sort=asc?client_id='+environment.clientId + '&client_secret='+environment.clientSecret;
+  
+  let repoUrl = 'https://api.github.com/users/'+username+'/repos?order=created&sort=asc?client_id='+environment.accessToken;
   let promise = new Promise<void>((resolve,reject) =>{
     this.httpClient.get<retrieveRepoData>(repoUrl).toPromise().then
     ((response: any) => {
