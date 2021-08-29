@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserData } from '../user-data';
+import { UserInfoService } from '../user-info.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -6,18 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-   
-   
+   user!:UserData;
+  repos:any;
   
-  
-  constructor() {
+  constructor(public userInfoService:UserInfoService) {
    }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+   searchUser(username:string){
+     this.userInfoService.getProfile(username).then((success: any)=>{
+      this.user = this.userInfoService.user;
+     },
+     (error: any)=>{
+       console.log(error)
+     });
+     this.userInfoService.getRepoData(username).then((success: any)=>{
+      this.repos = this.userInfoService.repos;
+     },
+     (error: any)=>{
+       console.log(error)
+     });
+   }
+   ngOnInit(): void {
+    this.searchUser('OndigoWendy');
   }
-   
-   }
-
+  }
 
   
 

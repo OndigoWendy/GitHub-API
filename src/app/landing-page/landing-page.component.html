@@ -1,1 +1,22 @@
 
+<div class="container mt-5">
+
+  <div class="row mt-5">
+      <div class="col-md-5">
+          <div class="row">
+              <img src="{{user.avatar_url}}" class="rounded-circle img-fluid" alt="Avatar">
+          </div>
+          <div class="row mb-5">
+              <h2 class="mt-5 mb-4">{{user.name}}</h2>
+      
+              <div class="col-md-2">
+                  <p>Followers: {{user.followers}}</p>
+              </div>
+              <div class="col-md-2">
+                  <p>Following: {{user.following}}</p>
+              </div>
+              <div class="col-md-2">
+                  <p>Repositories: {{user.public_repos}}</p>
+              </div>
+          </div>
+      </div>
