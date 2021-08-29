@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserInfoService } from './user-info.service';
+import { TimeLapsePipe } from './time-lapse.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     UserDetailsComponent,
+    TimeLapsePipe,
    
 
   ],
