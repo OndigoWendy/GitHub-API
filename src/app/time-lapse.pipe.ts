@@ -1,10 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+import { RepoData } from './repo-data';
 @Pipe({
   name: 'timeLapse'
 })
 export class TimeLapsePipe implements PipeTransform {
-
+   repodata!: RepoData;
+   created_at!: Date;
   transform(value: any): number {
     let today:Date = new Date(); //get current date and time
     let todayWithNoTime:any = new Date(today.getFullYear(), today.getMonth(), today.getDate())
