@@ -2,10 +2,13 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+//import { access } from "fs";
+
 export const environment = {
   production: false,
-  clientSecret: 'user client secret',
-  clientId: 'user client id'
+
+  clientId: 'user client id',
+  accessToken:'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',
   // access_token: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,
   // apiUrl:'https://api.github.com/users/daneden?access_token=' + apiKey
 };
