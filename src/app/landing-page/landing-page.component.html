@@ -11,13 +11,17 @@
     <div *ngFor="let repo of repos" class="card" style="width: 25;  background-image: url(/assets/pexels-benjamin-suter-3733269.jpg); color: azure; padding: 4%;">
      <div class="card-body" style="background-color: black; opacity: 0.75;">
     
-          <div class="card-text"><i> <u>Repository Name</u> </i> <br>{{repo.name}} </div>
-          <br>  
-          <div class="card-text"><i> <u>My Quote</u> </i> <br>{{repo.description}} </div>
-          <br>  
-          <div  class="card-text"><i> <u>My Quote</u> </i> <br>{{repo.language}} </div>
-          <br>  
-          <div class="card-text"><i> <u>My Quote</u> </i> <br>{{repo.created_at}} </div>
+         
+        
+          <div class="container">
+            <div class="row">
+              <div class="col"> <div class="card-text"><i> <u>Repository Name</u> </i> <br>{{repo.name}} </div></div>
+              <div class="col"> <div class="card-text"><i> <u>Description</u> </i> <br>{{repo.description}} </div></div>
+              <div class="w-100"></div>
+              <div class="col"><div  class="card-text"><i> <u>Language</u> </i> <br>{{repo.language}} </div></div>
+              <div class="col"> <div class="card-text"><i> <u>Date Created</u> </i> <br>{{repo.created_at}} </div></div>
+            </div>
+          </div>
         </div>
      </div>
  </div>
