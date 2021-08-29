@@ -12,7 +12,7 @@ export class UserInfoService {
   repos!: RepoData;
  
   constructor(private httpClient: HttpClient){ 
-    this.user = new UserData("",0,"",0,0,0,"");
+    this.user = new UserData("",0,"",0,0,0,"","","");
     this.repos = new RepoData("","","","",new Date(),"");
 }
 getProfile(username:string){
@@ -21,9 +21,7 @@ getProfile(username:string){
       login: string;
       url:string
       avatar_url:string;
-      followers:number;
-      following:number;
-      public_repos:number;
+      type:string;
   }
 let userApiUrl = 'https://api.github.com/users/'+username+'?client_id='+"accessToken="+environment.accessToken;
 //let userApiUrl = 'https://api.github.com/users/daneden?access_token=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';

@@ -6,6 +6,9 @@ export class UserData {
     public followers:number,
     public following:number,
     public public_repos:number,
-    public url:string
+    public url:string,
+    public type:string,
+    public html_url:string
+
   ) {}
 }
