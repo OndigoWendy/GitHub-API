@@ -63,7 +63,7 @@ getRepoData(username:string){
       resolve()
     },
       (        error: any)=>{
-      this.repos.name = "We couldn’t find any repositories matching the name given"
+      this.repos.name = "Repository not found"
 
       reject(error)
       })
